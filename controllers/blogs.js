@@ -9,9 +9,9 @@ const getAllBlogs = async (req, res) => {
     res.status(500).json({ err: "getting some error" });
   }
 };
-const getLastThree = async (req, res) => {
+const getLastFive = async (req, res) => {
   try {
-    const data = await Blog.find().sort({ _id: -1 }).limit(3);
+    const data = await Blog.find().sort({ _id: -1 }).limit(5);
     res.status(200).json({ data });
   } catch (err) {
     res.status(500).json({ err: "error getting blogs" });
@@ -119,7 +119,7 @@ const deleteBlog = async (req, res) => {
 
 module.exports = {
   getAllBlogs,
-  getLastThree,
+  getLastFive,
   popularBlogs,
   blogsGetsByPagination,
   getBlogBySlug,

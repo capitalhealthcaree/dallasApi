@@ -15,7 +15,7 @@ router.post("/appointment/create", appointment.createAppointment);
 
 // for Blogs Routes
 router.get("/blog/getAll", blogs.getAllBlogs);
-router.get("/blog/getLastThree", blogs.getLastThree);
+router.get("/blog/getLastFive", blogs.getLastFive);
 router.get("/blog/popularBlogs", blogs.popularBlogs);
 router.get("/blog/getBlogsByPagination", blogs.blogsGetsByPagination);
 router.get("/blog/:category/:slug", blogs.getBlogBySlug);
