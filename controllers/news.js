@@ -9,6 +9,14 @@ const getAllNews = async (req, res) => {
     res.status(500).json({ err: "getting some error" });
   }
 };
+const getLastFive = async (req, res) => {
+  try {
+    const data = await News.find().sort({ _id: -1 }).limit(5);
+    res.status(200).json({ data });
+  } catch (err) {
+    res.status(500).json({ err: "error getting blogs" });
+  }
+};
 const popularNews = async (req, res) => {
   try {
     const data = await News.find().sort({ _id: -1 }).limit(5);
@@ -109,6 +117,7 @@ const deleteNews = async (req, res) => {
 
 module.exports = {
   getAllNews,
+  getLastFive,
   popularNews,
   getNewsByPagination,
   getNewsBySlug,
