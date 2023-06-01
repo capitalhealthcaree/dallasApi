@@ -38,7 +38,7 @@ const getNewsByPagination = async (req, res) => {
 
 const getNewsBySlug = async (req, res) => {
   try {
-    let slugs = "/" + req.params.slug + "/";
+    let slugs = req.params.slug;
     const blog = await News.findOne({
       slug: slugs,
     });
