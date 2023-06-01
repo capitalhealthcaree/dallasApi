@@ -8,8 +8,6 @@ const newsSchema = mongoose.Schema(
     slug: { type: String, required: true },
     seoTitle: { type: Array, required: true },
     image: { type: String },
-    newsCreatedAt: { type: Date, default: Date.now },
-
   },
   { timestamps: true }
 );

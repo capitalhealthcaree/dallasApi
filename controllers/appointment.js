@@ -2,17 +2,17 @@ const nodemailer = require("nodemailer");
 const AppointmentModel = require("../model/appointment");
 
 const welocome = (req, res) => {
-  res.send("Welcome RCM APIs");
+  res.send("Welcome Dallas Premier Pain APIs");
 };
 
 const createAppointment = async (req, res) => {
-  const { name, phone, email, patientType, message } = req.body;
+  const { name, email, phone, patientType, message } = req.body;
 
   try {
     const demoData = await AppointmentModel.create({
       name,
-      phone,
       email,
+      phone,
       patientType,
       message,
     });
