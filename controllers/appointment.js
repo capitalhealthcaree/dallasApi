@@ -28,7 +28,7 @@ const createAppointment = async (req, res) => {
     const mailOptions = {
       from: email,
       to: "webdevelopercapital@gmail.com",
-      subject: "Patient's Appointment Details",
+      subject: "Patient's Appointment Details from Dallas",
       html: `
 		<html>
 		  <head>
