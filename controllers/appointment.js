@@ -17,13 +17,11 @@ const createAppointment = async (req, res) => {
       message,
     });
     // Send an email to the admin
-    //
-    // wacdfalkswopkrme
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: "webdevelopercapital@gmail.com",
-        pass: "Web$786786",
+        pass: "uvgqevylpebrtvgj",
       },
     });
 
