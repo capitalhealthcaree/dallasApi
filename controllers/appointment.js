@@ -21,7 +21,7 @@ const createAppointment = async (req, res) => {
       service: "gmail",
       auth: {
         user: "webdevelopercapital@gmail.com",
-        pass: "ulgfizctvtqktylr",
+        pass: "wacdfalkswopkrme",
       },
     });
 
